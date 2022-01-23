@@ -1,0 +1,217 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+
+body {
+  background-color: #18181b;
+  display: flex; }
+
+.hidden {
+  display: none; }
+
+.list {
+  list-style: none; }
+
+.header {
+  width: 6rem;
+  height: 100vh;
+  background-color: #27272a;
+  padding-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.8rem; }
+
+.header-extended {
+  width: 13vw; }
+
+.icon {
+  width: 4.8rem;
+  height: 4.8rem;
+  color: white; }
+
+.icon--small {
+  width: 3.8rem;
+  height: 3.8rem; }
+
+.icon--small--extra {
+  color: lightpink; }
+
+.icon--small--extra:hover {
+  color: #553a3e; }
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem; }
+  .nav button {
+    margin-top: 3.6rem;
+    background-color: transparent;
+    border: none; }
+  .nav li a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.15s; }
+  .nav li:first-child a {
+    color: yellowgreen; }
+  .nav li:first-child:hover a {
+    color: #4e661d; }
+  .nav li:nth-child(2) a {
+    color: peru; }
+  .nav li:nth-child(2):hover a {
+    color: #99622b; }
+  .nav li:nth-child(3) a {
+    color: plum; }
+  .nav li:nth-child(3):hover a {
+    color: #ad65ad; }
+  .nav li:nth-child(4) a {
+    color: rebeccapurple; }
+  .nav li:nth-child(4):hover a {
+    color: #411b68; }
+  .nav li:nth-child(5) a {
+    color: mediumspringgreen; }
+  .nav li:nth-child(5):hover a {
+    color: #0a5236; }
+  .nav li:nth-child(6) a {
+    color: #0f0f0f; }
+  .nav li:nth-child(6):hover a {
+    color: black; }
+  .nav li:nth-child(7) a {
+    color: white; }
+
+.main {
+  margin: 0 auto;
+  max-width: 90vw;
+  padding: 3.6rem;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  column-gap: 4.8rem; }
+
+.objectivity,
+.gaming,
+.music,
+.cycling,
+.coding,
+.marketing {
+  height: 40vh;
+  width: 25vw;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer; }
+
+.objectivity-box,
+.gaming-box,
+.music-box,
+.coding-box,
+.cycling-box,
+.marketing-box {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s; }
+  .objectivity-box:hover,
+  .gaming-box:hover,
+  .music-box:hover,
+  .coding-box:hover,
+  .cycling-box:hover,
+  .marketing-box:hover {
+    transform: scale(1.2); }
+
+.music {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  animation: topmid 1s; }
+  .music .music-box {
+    background-image: url(https://townsquare.media/site/295/files/2014/10/nirvana_photoshot_getty_1990_1383672381528.jpg); }
+  .music h2 {
+    text-align: center; }
+
+.cycling {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  animation-name: topright;
+  animation-duration: 1s; }
+  .cycling .cycling-box {
+    background-image: url(https://c.ndtvimg.com/2020-08/dtm9edd8_cycling_625x300_05_August_20.jpg); }
+
+.marketing {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  animation: btmmid 1s; }
+  .marketing .marketing-box {
+    background-image: url(https://www.zooinfotech.com/wp-content/uploads/2021/06/2.jpg); }
+
+.objectivity {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  animation: btmleft 1s; }
+  .objectivity .objectivity-box {
+    background-image: url(https://iafor.org/wp-content/uploads/2018/12/IAFOR-Journal-Ethics-Religion-Philosophy-Volume-4-Issue-1-top-image-1100x733.jpg); }
+
+.gaming {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  animation-name: topleft;
+  animation-duration: 1s; }
+  .gaming .gaming-box {
+    background-image: url(https://resources.esportsinsider.com/esportsinsider/2020/10/Riot-Games-Southeast-Asia-unveils-collegiate-plans-for-VALORANT.jpg); }
+  .gaming h2 {
+    text-align: center; }
+
+.coding {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  animation: btmright 1s; }
+  .coding .coding-box {
+    background-image: url(https://media.istockphoto.com/photos/matrix-picture-id629391430?b=1&k=20&m=629391430&s=170667a&w=0&h=qPymoWV_3-_XopdmzCVB-p7bZV5zVQpvuwimLqiN43s=); }
+
+@keyframes topleft {
+  0% {
+    transform: translate(-6rem, -6rem); }
+  100% {
+    transform: translate(0, 0); } }
+
+@keyframes topright {
+  0% {
+    transform: translate(6rem, -6rem); }
+  100% {
+    transform: translate(0, 0); } }
+
+@keyframes btmright {
+  0% {
+    transform: translate(6rem, 6rem); }
+  100% {
+    transform: translate(0, 0); } }
+
+@keyframes btmleft {
+  0% {
+    transform: translate(-6rem, 6rem); }
+  100% {
+    transform: translate(0, 0); } }
+
+@keyframes btmmid {
+  0% {
+    transform: translate(0, 6rem); }
+  100% {
+    transform: translate(0, 0); } }
+
+@keyframes topmid {
+  0% {
+    transform: translate(0, -6rem); }
+  100% {
+    transform: translate(0, 0); } }
